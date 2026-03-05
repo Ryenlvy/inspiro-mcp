@@ -18,7 +18,7 @@ Inspiro MCP 服务器提供以下能力：
 ## 使用 NPX 运行
 
 ```bash
-npx -y inspiro-mcp@latest
+npx -y github:Ryenlvy/inspiro-mcp
 ```
 
 ## 配置方式
@@ -30,7 +30,7 @@ npx -y inspiro-mcp@latest
   "mcpServers": {
     "inspiro-mcp": {
       "command": "npx",
-      "args": ["-y", "inspiro-mcp@latest"],
+      "args": ["-y", "github:Ryenlvy/inspiro-mcp"],
       "env": {
         "INSPIRO_API_KEY": "your-api-key-here"
       }
@@ -42,7 +42,7 @@ npx -y inspiro-mcp@latest
 ### 连接 Claude Code
 
 ```bash
-claude mcp add inspiro -- npx -y inspiro-mcp@latest
+claude mcp add inspiro -- npx -y github:Ryenlvy/inspiro-mcp
 ```
 
 然后将 `INSPIRO_API_KEY` 环境变量设置为你的 API Key。
@@ -64,7 +64,7 @@ export DEFAULT_PARAMETERS='{"include_images": true}'
   "mcpServers": {
     "inspiro-mcp": {
       "command": "npx",
-      "args": ["-y", "inspiro-mcp@latest"],
+      "args": ["-y", "github:Ryenlvy/inspiro-mcp"],
       "env": {
         "INSPIRO_API_KEY": "your-api-key-here",
         "DEFAULT_PARAMETERS": "{\"include_images\": true, \"max_results\": 15, \"search_depth\": \"advanced\"}"
