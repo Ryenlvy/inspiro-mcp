@@ -47,6 +47,16 @@ claude mcp add inspiro -- npx -y github:Ryenlvy/inspiro-mcp
 
 然后将 `INSPIRO_API_KEY` 环境变量设置为你的 API Key。
 
+### 连接 Codex CLI
+
+```bash
+codex mcp add inspiro \
+  --env INSPIRO_API_KEY=your-api-key-here \
+  -- npx -y github:Ryenlvy/inspiro-mcp
+```
+
+可使用 `codex mcp list` 查看是否添加成功。
+
 ## 默认参数配置
 
 你可以通过 `DEFAULT_PARAMETERS` 环境变量为 `inspiro_search` 设置默认参数。
