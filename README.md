@@ -1,28 +1,27 @@
-# Inspiro MCP Server
+# Inspiro MCP 服务器
 
-Inspiro MCP server provides:
-- search, extract, map, crawl tools
-- Real-time web search capabilities through the inspiro-search tool
-- Intelligent data extraction from web pages via the inspiro-extract tool
-- Powerful web mapping tool that creates a structured map of website
-- Web crawler that systematically explores websites
+Inspiro MCP 服务器提供以下能力：
+- 搜索、提取、站点映射、爬取等工具
+- 通过 `inspiro_search` 进行实时网页搜索
+- 通过 `inspiro_extract` 提取网页内容
+- 通过 `inspiro_map` 生成网站结构映射
+- 通过 `inspiro_crawl` 对网站进行系统化抓取
 
-## Prerequisites
+## 前置条件
 
-Before you begin, ensure you have:
+开始前请确保你具备以下环境：
+- Inspiro API Key（可在 Inspiro 前端获取）
+- [Claude Desktop](https://claude.ai/download) 或 [Cursor](https://cursor.sh)
+- [Node.js](https://nodejs.org/)（v20 或更高版本）
+- [Git](https://git-scm.com/downloads)（仅在使用 Git 安装方式时需要）
 
-- Inspiro API key (obtain from the Inspiro frontend)
-- [Claude Desktop](https://claude.ai/download) or [Cursor](https://cursor.sh)
-- [Node.js](https://nodejs.org/) (v20 or higher)
-- [Git](https://git-scm.com/downloads) installed (only needed if using Git installation method)
-
-## Running with NPX
+## 使用 NPX 运行
 
 ```bash
 npx -y inspiro-mcp@latest
 ```
 
-## Configuration
+## 配置方式
 
 ### Claude Desktop / Cursor
 
@@ -40,25 +39,25 @@ npx -y inspiro-mcp@latest
 }
 ```
 
-### Connect to Claude Code
+### 连接 Claude Code
 
 ```bash
 claude mcp add inspiro -- npx -y inspiro-mcp@latest
 ```
 
-Then set the `INSPIRO_API_KEY` environment variable with your API key.
+然后将 `INSPIRO_API_KEY` 环境变量设置为你的 API Key。
 
-## Default Parameters Configuration
+## 默认参数配置
 
-You can set default parameter values for the `inspiro-search` tool using the `DEFAULT_PARAMETERS` environment variable.
+你可以通过 `DEFAULT_PARAMETERS` 环境变量为 `inspiro_search` 设置默认参数。
 
-### Example Configuration
+### 配置示例
 
 ```bash
 export DEFAULT_PARAMETERS='{"include_images": true}'
 ```
 
-### Example usage from Client
+### 客户端配置示例
 
 ```json
 {
@@ -75,15 +74,15 @@ export DEFAULT_PARAMETERS='{"include_images": true}'
 }
 ```
 
-## Available Tools
+## 可用工具
 
-- **inspiro_search** - Real-time web search with customizable depth, domain filtering, and time-based filtering
-- **inspiro_extract** - Extract and process content from specified URLs
-- **inspiro_crawl** - Systematically explore websites starting from a base URL
-- **inspiro_map** - Create detailed site maps by analyzing website structure
-- **inspiro_research** - Comprehensive research on any topic gathering information from multiple sources
+- **inspiro_search**：实时网页搜索，支持搜索深度、域名过滤、时间范围等参数
+- **inspiro_extract**：从指定 URL 提取并处理内容
+- **inspiro_crawl**：从起始 URL 开始递归抓取网站页面
+- **inspiro_map**：分析网站结构并生成站点映射
+- **inspiro_research**：围绕主题进行多来源综合研究
 
-## Acknowledgments
+## 致谢
 
-- [Model Context Protocol](https://modelcontextprotocol.io) for the MCP specification
-- [Anthropic](https://anthropic.com) for Claude Desktop
+- [Model Context Protocol](https://modelcontextprotocol.io)（MCP 协议规范）
+- [Anthropic](https://anthropic.com)（Claude Desktop）
