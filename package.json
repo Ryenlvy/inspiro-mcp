@@ -1,0 +1,57 @@
+{
+  "name": "inspiro-mcp",
+  "version": "0.2.17",
+  "mcpName": "inspiro-mcp",
+  "description": "MCP server for advanced web search using Inspiro",
+  "type": "module",
+  "bin": {
+    "inspiro-mcp": "build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "inspiro-mcp",
+    "inspiro",
+    "mcp",
+    "crawl",
+    "model-context-protocol",
+    "websearch",
+    "claude",
+    "claude-desktop",
+    "search-api",
+    "web-search",
+    "ai-search",
+    "real-time-search",
+    "search-tools",
+    "inspiro-api",
+    "inspiro-search",
+    "inspiro-extract",
+    "web-extraction",
+    "data-extraction",
+    "search-integration"
+  ],
+  "author": "ryenlvy",
+  "contributors": [
+    "ryenlvy"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.26.0",
+    "dotenv": "^16.4.5",
+    "axios": "^1.6.7",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/yargs": "^17.0.32",
+    "typescript": "^5.3.3"
+  }
+}
